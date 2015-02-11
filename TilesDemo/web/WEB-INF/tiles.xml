@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : tiles.xml
+    Created on : February 12, 2012, 9:06 PM
+    Author     : Admin
+    Description:
+        Purpose of the document follows.
+-->
+<!DOCTYPE tiles-definitions PUBLIC
+"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" 
+"http://struts.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+    <definition name = "welcome" template = "/mylayout.jsp">
+        <put-attribute name = "title" value = "welcome Page"/>
+        <put-attribute name = "header" value = "/h1.jsp"/>
+        <put-attribute name = "footer" value = "/f1.jsp"/>
+        <put-attribute name = "body" value = "/welcome.jsp"/>
+    </definition>
+    
+    <definition name = "relogin" template = "/mylayout.jsp">
+      <put-attribute name = "title" value = "Login Error"/>
+        <put-attribute name = "header" value = "/h1.jsp"/>
+        <put-attribute name = "footer" value = "/f1.jsp"/>
+        <put-attribute name = "body" value = "/relogin.jsp"/>
+    </definition>
+        
+</tiles-definitions>
+

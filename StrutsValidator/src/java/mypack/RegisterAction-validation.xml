@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : RegisterAction-validation.xml.xml
+    Created on : February 12, 2012, 9:05 AM
+    Author     : Admin
+    Description:
+        Purpose of the document follows.
+-->
+ <!DOCTYPE validators PUBLIC
+  		"-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+                
+<validators>
+
+<field name = "name">
+    <field-validator type = "requiredstring">
+        <message> Name is required. </message>
+    </field-validator>
+    <field-validator type = "regex">
+        <param name = "expression"> [A-Z,a-z]* </param>
+        <message> Name can contain only alphabets </message>
+    </field-validator>
+</field>
+
+<field name = "password">
+    <field-validator type = "requiredstring">
+        <message> Password is required. </message>
+    </field-validator>
+    <field-validator type = "stringlength">
+        <param name = "minlength"> 5 </param>
+        <param name = "maxlength"> 12 </param>
+        <message> Password length must be between 5 to 12 characters. </message>
+    </field-validator>
+</field>
+
+<field name = "email">
+    <field-validator type = "requiredstring">
+        <message> MailId is required </message>
+    </field-validator>
+    <field-validator type = "email">
+        <message> Mail ID must be in proper format </message>
+    </field-validator>
+</field>
+
+<field name = "age">
+    
+    <field-validator type="int">
+        <param name = "min"> 18 </param>
+        <param name = "max"> 60 </param>
+        <message> Age must be between 18 to 60 years </message>
+    </field-validator>
+</field>
+
+</validators>

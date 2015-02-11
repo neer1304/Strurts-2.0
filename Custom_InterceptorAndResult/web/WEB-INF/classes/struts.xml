@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : struts.xml
+    Created on : January 28, 2012, 9:29 PM
+    Author     : Admin
+    Description:
+        Purpose of the document follows.
+-->
+
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name = "demo" >
+
+        <result-types>
+            <result-type name="r1" class="mypack.MyResult" default="true"/>
+        </result-types>
+
+        <interceptors>
+            <interceptor name="ps" class="mypack.MyInterceptor"/>
+        </interceptors>
+
+        <default-interceptor-ref name = "ps"/>
+
+    <action name = "login" class = "mypack.LoginAction" >
+    <result name = "success"> /welcome.jsp </result>
+    <result name = "failure"> /relogin.jsp </result>
+    </action>
+    </package>
+</struts>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : struts.xml
+    Created on : January 28, 2012, 9:29 PM
+    Author     : Admin
+    Description:
+        Purpose of the document follows.
+-->
+
+ <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name = "demo" extends = "struts-default" >
+
+    <action name = "register" class = "mypack.RegisterAction" >
+    <result name = "success" > /welcome.jsp </result>
+    <result name = "input"> /index.jsp </result>
+    </action>
+    </package>
+</struts>
